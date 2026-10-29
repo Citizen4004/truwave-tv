@@ -1,0 +1,33 @@
+# TruWave TV
+
+> TruWave TV is a licensed IPTV subscription service offering live TV channels (Sports, News, Documentaries, Kids, Local) plus a small, specifically licensed library of Movies & TV Shows (VOD), in 4K and Full HD, with a free 24-hour trial, AntiFreeze Technology for stable streaming, a TV Guide (EPG), 24/7 WhatsApp support, worldwide access, and a pay-only-after-confirmed-working model. Plans range from 1 to 12 months, supporting 1-5 simultaneous devices (more available on request).
+
+## Key pages
+
+- [Home](https://truwavetv.com/): overview, channel categories, pricing, FAQ
+- [Pricing](https://truwavetv.com/#pricing): plans (1/3/6/12 months), multi-device pricing
+- [Apps](https://truwavetv.com/apps/): comparison of compatible player apps (TiviMate, IPTV Smarters Pro, GSE Smart IPTV, IBO Player, OTT Navigator)
+- [Blog](https://truwavetv.com/blog/): setup guides, troubleshooting, and buyer's guides
+
+## Setup guides
+
+- [How to Install IPTV on Firestick](https://truwavetv.com/blog/how-to-install-iptv-on-firestick.html)
+- [How to Set Up IPTV on TiviMate](https://truwavetv.com/blog/how-to-set-up-tivimate.html)
+- [How to Set Up IPTV on PC, Mac, MAG Box & Formuler](https://truwavetv.com/blog/how-to-set-up-iptv-on-pc-mac-mag-formuler.html)
+
+## Buyer's guides
+
+- [How to Choose the Best IPTV Service in 2026](https://truwavetv.com/blog/best-iptv-service-2026.html)
+- [How Much Does IPTV Cost?](https://truwavetv.com/blog/how-much-does-iptv-cost.html)
+- [IPTV Scams: The Real Pattern Behind Them](https://truwavetv.com/blog/iptv-scams-red-flags.html)
+- [Is IPTV Worth It?](https://truwavetv.com/blog/iptv-worth-it.html)
+
+## Troubleshooting
+
+- [IPTV Keeps Buffering? The Complete Fix Guide](https://truwavetv.com/blog/fix-iptv-buffering.html)
+- [Do You Need a VPN for IPTV?](https://truwavetv.com/blog/vpn-for-iptv.html)
+- [IPTV Program Guide (EPG) Not Showing?](https://truwavetv.com/blog/iptv-epg-not-working.html)
+
+## Contact
+
+WhatsApp: +1 205 709 2376 (24/7 support, free 24-hour trial requests)
