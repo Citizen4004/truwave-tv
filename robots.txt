@@ -1,0 +1,26 @@
+# TruWave TV — robots.txt
+# General crawlers
+User-agent: *
+Allow: /
+
+# AI answer-engine crawlers that fetch pages on-demand to answer a user's question
+# (left allowed so TruWave TV can be cited/answered correctly by AI search tools)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://truwavetv.com/sitemap.xml

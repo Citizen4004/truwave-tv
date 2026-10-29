@@ -1,0 +1,12 @@
+{
+  "name": "TruWave TV",
+  "short_name": "TruWave TV",
+  "description": "Licensed IPTV service streaming live US channels.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090c14",
+  "theme_color": "#090c14",
+  "icons": [
+    { "src": "/images/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
