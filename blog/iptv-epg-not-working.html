@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IPTV Program Guide (EPG) Not Showing? How to Fix It</title>
-<meta name="description" content="When your IPTV channel guide is empty, outdated, or missing, here's how to diagnose and fix EPG issues on any player app or device.">
+<meta name="description" content="When your IPTV channel guide is empty, outdated, or missing — including on TiviMate — here's how to diagnose and fix EPG issues on any player app or device.">
 <link rel="canonical" href="https://truwavetv.com/blog/iptv-epg-not-working.html">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg">
@@ -25,7 +25,7 @@
       "description": "When your IPTV channel guide is empty, outdated, or missing, here's how to diagnose and fix EPG issues on any player app or device.",
       "url": "https://truwavetv.com/blog/iptv-epg-not-working.html",
       "datePublished": "2026-10-28",
-      "dateModified": "2026-10-28",
+      "dateModified": "2026-10-29",
       "author": { "@type": "Organization", "name": "TruWave TV", "url": "https://truwavetv.com/" },
       "publisher": { "@type": "Organization", "name": "TruWave TV", "logo": { "@type": "ImageObject", "url": "https://truwavetv.com/images/icons/favicon.svg" } }
     },
@@ -42,7 +42,8 @@
       "mainEntity": [
         { "@type": "Question", "name": "What is an EPG in IPTV?", "acceptedAnswer": { "@type": "Answer", "text": "EPG stands for Electronic Program Guide — it's the schedule data that shows what's currently playing and what's coming up next on each channel." } },
         { "@type": "Question", "name": "Why is my channel guide empty?", "acceptedAnswer": { "@type": "Answer", "text": "Usually a cache issue, an unsynced EPG source, or a channel that simply doesn't have guide data attached to it. Refreshing the playlist and EPG in your app's settings fixes most cases." } },
-        { "@type": "Question", "name": "Does an empty guide mean my channels won't play?", "acceptedAnswer": { "@type": "Answer", "text": "No. The guide is just schedule information — channels can stream fine even if the program guide data is temporarily missing or outdated." } }
+        { "@type": "Question", "name": "Does an empty guide mean my channels won't play?", "acceptedAnswer": { "@type": "Answer", "text": "No. The guide is just schedule information — channels can stream fine even if the program guide data is temporarily missing or outdated." } },
+        { "@type": "Question", "name": "Is TiviMate EPG not working TiviMate's fault or the provider's?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always the provider or EPG source, not TiviMate itself. TiviMate is just the player displaying guide data it's given — if that data isn't being sent correctly, the app has nothing to show, regardless of how it's configured." } }
       ]
     }
   ]
@@ -88,6 +89,16 @@
         <li><strong>Try another player app.</strong> If the guide works in a second app with the same subscription, the issue is with the first app's settings, not your service.</li>
       </ol>
 
+      <h2>If you're using TiviMate specifically</h2>
+      <p>TiviMate is one of the most common apps people report EPG problems on — but the detail that gets missed is that <strong>TiviMate is just the player displaying guide data, not the source of it.</strong> If the guide is empty, the data either isn't being sent by your provider or isn't synced correctly in TiviMate's settings — it's rarely a bug in TiviMate itself.</p>
+      <p>Where to check, specifically:</p>
+      <ul>
+        <li><strong>Settings → Playlists → [your playlist] → EPG source.</strong> Confirm an EPG URL is actually set — some setups default to "none" if it wasn't added during initial setup.</li>
+        <li><strong>Remove and re-add the EPG source.</strong> This forces a full re-sync rather than relying on a partial cached version.</li>
+        <li><strong>Check "EPG duration"</strong> under playlist settings — if it's set very low, you'll only see a sliver of guide data and it can look broken when it isn't.</li>
+        <li><strong>Confirm the EPG URL matches what your provider gave you exactly</strong> — a typo or outdated link is one of the most common causes of a guide that loads the channel list fine but shows nothing for the schedule.</li>
+      </ul>
+
       <div class="callout">
         <p>Still showing a blank guide after these steps? Message TruWave TV on WhatsApp with your app name and device, and we'll check it with you directly.</p>
       </div>
@@ -99,6 +110,8 @@
       <p>Usually a cache issue, an unsynced EPG source, or a channel that simply doesn't have guide data attached to it. Refreshing the playlist and EPG in your app's settings fixes most cases.</p>
       <h3>Does an empty guide mean my channels won't play?</h3>
       <p>No. The guide is just schedule information — channels can stream fine even if the program guide data is temporarily missing or outdated.</p>
+      <h3>Is TiviMate EPG not working TiviMate's fault or the provider's?</h3>
+      <p>Almost always the provider or EPG source, not TiviMate itself. TiviMate is just the player displaying guide data it's given — if that data isn't being sent correctly, the app has nothing to show, regardless of how it's configured.</p>
 
       <div class="post-footer-cta">
         <h3>Need help with your program guide?</h3>
