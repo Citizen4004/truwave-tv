@@ -27,7 +27,7 @@
 <link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://wa.me">
-<link rel="stylesheet" href="/css/styles.css?v=2">
+<link rel="stylesheet" href="/css/styles.css?v=3">
 
 <!-- Organization + Service + Offers structured data -->
 <script type="application/ld+json">
@@ -474,15 +474,18 @@
         <h2>What customers tell us on WhatsApp</h2>
         <p>Real screenshots from real support conversations — nothing staged.</p>
       </div>
-      <div class="testi-grid">
-        <!--
-          Drop real WhatsApp review screenshots into /images/testimonials/
-          and replace each placeholder <div class="testi-placeholder"> below
-          with: <img src="/images/testimonials/review-1.jpg" alt="Customer WhatsApp review for TruWave TV IPTV" loading="lazy" width="480" height="640">
-        -->
-        <div class="testi-card"><div class="testi-placeholder">📱<br>Review screenshot 1<br><span>(add image)</span></div></div>
-        <div class="testi-card"><div class="testi-placeholder">📱<br>Review screenshot 2<br><span>(add image)</span></div></div>
-        <div class="testi-card"><div class="testi-placeholder">📱<br>Review screenshot 3<br><span>(add image)</span></div></div>
+      <div class="testi-slider" role="region" aria-label="Customer WhatsApp reviews">
+        <button class="testi-nav testi-prev" type="button" aria-label="Previous review">&#8249;</button>
+        <div class="testi-track" id="testi-track">
+          <div class="testi-slide"><img src="/images/testimonials/review-1.jpg" alt="WhatsApp conversation: a TruWave TV customer thanks support after a subscription renewal is activated" loading="lazy" width="520" height="790"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-2.jpg" alt="WhatsApp conversation: a customer tells TruWave TV support 'Great customer service!' after their subscription is activated" loading="lazy" width="520" height="389"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-3.jpg" alt="WhatsApp conversation: a customer completing a TruWave TV subscription payment and calling the service 'superb'" loading="lazy" width="520" height="648"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-4.jpg" alt="WhatsApp conversation: a customer thanks TruWave TV for fixing a streaming issue and says they'll recommend the service to friends" loading="lazy" width="520" height="441"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-5.jpg" alt="WhatsApp conversation: a customer tells TruWave TV 'I've had many services, but never like yours, they're of great quality and non-stop'" loading="lazy" width="520" height="433"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-6.jpg" alt="WhatsApp conversation: TruWave TV support resolves an expired-subscription issue, customer calls it 'wonderful customer service'" loading="lazy" width="520" height="788"></div>
+          <div class="testi-slide"><img src="/images/testimonials/review-7.jpg" alt="WhatsApp conversation: a customer says 'Great customer service. Works fine. Thanks very much.' after a TruWave TV troubleshooting fix" loading="lazy" width="520" height="700"></div>
+        </div>
+        <button class="testi-nav testi-next" type="button" aria-label="Next review">&#8250;</button>
       </div>
     </div>
   </section>
@@ -608,6 +611,6 @@
 <a class="wa-float" href="https://wa.me/12057092376?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20TruWave%20TV%20IPTV." rel="noopener" target="_blank" aria-label="Chat with TruWave TV on WhatsApp">💬</a>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="/js/main.js?v=2"></script>
+<script src="/js/main.js?v=3"></script>
 </body>
 </html>

@@ -63,4 +63,21 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  // Testimonials slider
+  var track = document.getElementById('testi-track');
+  if (track) {
+    var prevBtn = document.querySelector('.testi-prev');
+    var nextBtn = document.querySelector('.testi-next');
+    var scrollByAmount = function () {
+      var slide = track.querySelector('.testi-slide');
+      return slide ? slide.getBoundingClientRect().width + 16 : 280;
+    };
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+      track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' });
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+      track.scrollBy({ left: scrollByAmount(), behavior: 'smooth' });
+    });
+  }
 });

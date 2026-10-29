@@ -226,19 +226,26 @@ section{padding:88px 0;}
 .apps-note b{color:var(--text);}
 
 /* Testimonials */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-@media (max-width:860px){.testi-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:560px){.testi-grid{grid-template-columns:1fr;}}
-.testi-card{
+.testi-slider{position:relative;display:flex;align-items:center;gap:10px;}
+.testi-track{
+  display:flex;align-items:flex-start;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  padding:4px 4px 14px;-webkit-overflow-scrolling:touch;
+}
+.testi-track::-webkit-scrollbar{height:6px;}
+.testi-track::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px;}
+.testi-slide{
+  flex:0 0 auto;width:min(78vw,280px);scroll-snap-align:start;
   background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
-  overflow:hidden;
+  overflow:hidden;box-shadow:var(--shadow);
 }
-.testi-card img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--bg-elev);}
-.testi-placeholder{
-  aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;flex-direction:column;
-  gap:8px;color:var(--text-faint);font-size:.8rem;padding:20px;text-align:center;
-  background:repeating-linear-gradient(135deg, var(--bg-elev) 0 10px, var(--bg-card) 10px 20px);
+.testi-slide img{width:100%;height:auto;display:block;}
+.testi-nav{
+  flex:0 0 auto;width:40px;height:40px;border-radius:50%;border:1px solid var(--border);
+  background:var(--bg-card);color:var(--text);font-size:1.3rem;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
 }
+.testi-nav:hover{border-color:var(--accent);color:var(--accent);}
+@media (max-width:640px){.testi-nav{display:none;}}
 
 /* FAQ */
 .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
