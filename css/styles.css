@@ -126,12 +126,6 @@ section{padding:64px 0;}
 .hero-card-row b{color:var(--text);}
 .check{color:var(--accent);margin-right:8px;}
 
-/* Trust bar */
-.trust-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-elev);}
-.trust-bar .container{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;padding:26px 20px;}
-.trust-item{display:flex;align-items:center;gap:10px;color:var(--text-dim);font-size:.9rem;font-weight:600;}
-.trust-item svg{flex-shrink:0;color:var(--accent);}
-
 /* Section heading */
 .section-head{max-width:680px;margin:0 auto 48px;text-align:center;}
 .section-head h2{font-size:clamp(1.6rem,3vw,2.3rem);}
