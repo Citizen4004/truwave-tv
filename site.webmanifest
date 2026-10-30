@@ -4,8 +4,8 @@
   "description": "Licensed IPTV service streaming live US channels.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#090c14",
-  "theme_color": "#090c14",
+  "background_color": "#faf8f5",
+  "theme_color": "#0c7d6e",
   "icons": [
     { "src": "/images/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
   ]

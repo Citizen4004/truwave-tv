@@ -72,10 +72,9 @@ section{padding:64px 0;}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--text);}
 .brand-mark{
-  width:34px;height:34px;border-radius:9px;
+  width:34px;height:34px;border-radius:9px;flex-shrink:0;
   background:linear-gradient(135deg,var(--accent),var(--gold));
   display:flex;align-items:center;justify-content:center;
-  font-size:.85rem;font-weight:900;color:#ffffff;
 }
 .nav-links{display:flex;gap:30px;align-items:center;}
 .nav-links a{color:var(--text-dim);font-weight:600;font-size:.94rem;transition:color .15s;}
