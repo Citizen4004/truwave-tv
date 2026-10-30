@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
           var message = "Hi! I'd like to get started with the TruWave TV " + planLabel +
             ' plan (' + devices + ' ' + deviceWord + ', $' + price.toFixed(2) +
             "). Can you help me set it up?";
-          cta.href = 'https://wa.me/12057092376?text=' + encodeURIComponent(message);
+          cta.href = 'https://wa.me/12097559199?text=' + encodeURIComponent(message);
         }
       });
     });
