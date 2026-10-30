@@ -25,7 +25,7 @@
       "description": "Channels not loading in TiviMate or IPTV Smarters Pro? Here's how to fix it, step by step, for both apps.",
       "url": "https://truwavetv.com/blog/tivimate-smarters-not-loading-channels.html",
       "datePublished": "2026-10-28",
-      "dateModified": "2026-10-28",
+      "dateModified": "2026-10-30",
       "author": { "@type": "Organization", "name": "TruWave TV", "url": "https://truwavetv.com/" },
       "publisher": { "@type": "Organization", "name": "TruWave TV", "logo": { "@type": "ImageObject", "url": "https://truwavetv.com/images/icons/favicon.svg" } }
     },
@@ -41,7 +41,9 @@
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Why are my channels missing in TiviMate after adding a playlist?", "acceptedAnswer": { "@type": "Answer", "text": "Usually the playlist is still syncing, or the Xtream Codes/M3U details have a small error. Give it a minute, then try refreshing the playlist from Settings > Playlists." } },
-        { "@type": "Question", "name": "IPTV Smarters Pro shows categories but no channels inside them, why?", "acceptedAnswer": { "@type": "Answer", "text": "This is usually a sync issue. Remove the user profile, restart the app, and re-add it rather than refreshing in place." } }
+        { "@type": "Question", "name": "IPTV Smarters Pro shows categories but no channels inside them, why?", "acceptedAnswer": { "@type": "Answer", "text": "This is usually a sync issue. Remove the user profile, restart the app, and re-add it rather than refreshing in place." } },
+        { "@type": "Question", "name": "Why do only some of my channels work while others don't load?", "acceptedAnswer": { "@type": "Answer", "text": "This usually means those specific channels are temporarily down on the provider's side, not a problem with your setup. Try them again after a few minutes before changing any settings." } },
+        { "@type": "Question", "name": "Could a filter be hiding my channels instead of them actually being missing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this is common. Both apps let you hide categories or restrict the list to favorites only, and it's easy to toggle by accident. Check for a category filter or favorites-only toggle before assuming the playlist itself is broken." } }
       ]
     }
   ]
@@ -72,7 +74,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / TiviMate/Smarters Not Loading</nav>
-      <span class="post-meta">Troubleshooting · Updated October 2026 · 4 min read</span>
+      <span class="post-meta">Troubleshooting · Updated October 2026 · 7 min read</span>
       <h1>TiviMate or IPTV Smarters Pro Not Loading Channels? Fixes</h1>
       <p class="dek">Playlist added but no channels showing? This is one of the most common first-time setup issues on both apps, and it's almost always one of these four things.</p>
 
@@ -87,6 +89,15 @@
 
       <h2>4. Check your internet connection</h2>
       <p>If the app itself opens fine but nothing loads, confirm your device actually has a working internet connection. Test another app or website on the same device.</p>
+
+      <h2>Some channels load, but not all</h2>
+      <p>This is a different problem from a totally empty channel list, and it points to a different cause. If most of your lineup loads fine but a handful of specific channels won't play or don't appear, that's usually those individual channel records being temporarily down on the provider's side, not a setup issue on your end at all. Try those same channels again in a few minutes before assuming anything is broken in your configuration.</p>
+
+      <h2>Check your filters before assuming channels are missing</h2>
+      <p>Both apps let you hide categories or mark channels as favorites-only, and it's easy to toggle one of these by accident during setup, especially on a remote where a stray click lands somewhere unintended. In TiviMate, check Settings → Channels → Category Filter (or the filter icon on the channel list screen itself) to confirm nothing's hidden. In IPTV Smarters Pro, check for a "favorites only" or category toggle near the top of the channel list. This single check resolves a surprising number of "half my channels disappeared" reports that have nothing to do with the playlist itself.</p>
+
+      <h2>Force stop the app, not just close it</h2>
+      <p>On Android TV and Firestick, swiping an app away from the recent apps screen doesn't always fully kill its background process, meaning it can reopen with the same stuck state that caused the problem in the first place. Go to Settings → Apps → [app name] → Force Stop to genuinely kill it, then reopen. This is a different, stronger step than the simple restart covered above, and it's worth trying specifically if a normal restart didn't help.</p>
 
       <h2>App-specific notes</h2>
       <table>
@@ -106,6 +117,10 @@
       <p>Usually the playlist is still syncing, or the Xtream Codes/M3U details have a small error. Give it a minute, then try refreshing the playlist from Settings → Playlists.</p>
       <h3>IPTV Smarters Pro shows categories but no channels inside them, why?</h3>
       <p>This is usually a sync issue. Remove the user profile, restart the app, and re-add it rather than refreshing in place.</p>
+      <h3>Why do only some of my channels work while others don't load?</h3>
+      <p>This usually means those specific channels are temporarily down on the provider's side, not a problem with your setup. Try them again after a few minutes before changing any settings.</p>
+      <h3>Could a filter be hiding my channels instead of them actually being missing?</h3>
+      <p>Yes, this is common. Both apps let you hide categories or restrict the list to favorites only, and it's easy to toggle by accident. Check for a category filter or favorites-only toggle before assuming the playlist itself is broken.</p>
 
       <div class="post-footer-cta">
         <h3>Need help getting your channels loaded?</h3>

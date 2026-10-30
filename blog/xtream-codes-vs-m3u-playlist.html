@@ -27,7 +27,7 @@
       "description": "Xtream Codes and M3U playlists are the two common ways IPTV subscriptions are delivered. Here's what each one is, how they work, and which to choose.",
       "url": "https://truwavetv.com/blog/xtream-codes-vs-m3u-playlist.html",
       "datePublished": "2026-10-28",
-      "dateModified": "2026-10-28",
+      "dateModified": "2026-10-30",
       "author": { "@type": "Organization", "name": "TruWave TV", "url": "https://truwavetv.com/" },
       "publisher": { "@type": "Organization", "name": "TruWave TV", "logo": { "@type": "ImageObject", "url": "https://truwavetv.com/images/icons/favicon.svg" } }
     },
@@ -56,6 +56,16 @@
           "@type": "Question",
           "name": "Do I need technical skill to set these up?",
           "acceptedAnswer": { "@type": "Answer", "text": "No. You're pasting a URL or a set of login details into a player app's settings screen. Most providers' support teams will walk you through it the first time." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I tell if I have an M3U playlist or Xtream Codes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A single link, especially one ending in .m3u or .m3u8 or containing get.php, is an M3U playlist. Three separate pieces, a server address, username, and password, is Xtream Codes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an M3U link less secure than Xtream Codes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Slightly, in one specific way: an M3U link has your credentials embedded in the URL itself, so anyone who gets that exact link can use it. Xtream Codes keeps username and password as separate fields. Neither is meaningfully insecure for normal personal use; just avoid sharing a full M3U URL publicly." }
         }
       ]
     }
@@ -92,7 +102,7 @@
         <a href="/">Home</a> / <a href="/blog/">Blog</a> / Xtream Codes vs M3U Playlist
       </nav>
 
-      <span class="post-meta">Setup · Updated October 2026 · 4 min read</span>
+      <span class="post-meta">Setup · Updated October 2026 · 7 min read</span>
       <h1>Xtream Codes vs M3U Playlist: What's the Difference?</h1>
       <p class="dek">Xtream Codes and an M3U playlist are the two standard ways an IPTV subscription gets delivered to your player app. Xtream Codes is a login (server URL, username, password); an M3U playlist is a single link containing the full channel list. Both do the same job. Point your app at your channels.</p>
 
@@ -113,6 +123,15 @@
         </tbody>
       </table>
 
+      <h2>How to tell which one you have</h2>
+      <p>If your provider sent you details without labeling the format, there's an easy way to check. If you received a single link, especially one ending in ".m3u" or ".m3u8", or containing "get.php" somewhere in the URL, that's an M3U playlist. If you received three separate pieces, a server address, a username, and a password, that's Xtream Codes. Some providers send both regardless of which you asked for, in which case either works and it's genuinely your preference.</p>
+
+      <h2>A security difference worth knowing</h2>
+      <p>This doesn't come up often, but it's worth understanding. An M3U URL has your access credentials baked directly into the link itself, which means anyone who gets hold of that exact URL (through a screenshot, a shared file, or a misconfigured app) can use your subscription until the provider changes the link. Xtream Codes keeps your username and password as separate fields rather than one shareable link, which is marginally harder to leak by accident, though neither format is meaningfully "insecure" for normal personal use. It mostly matters if you're ever sharing setup screenshots or troubleshooting in a public forum, blur out the full M3U URL the same way you'd blur a password.</p>
+
+      <h2>EPG and VOD: a quick note</h2>
+      <p>Xtream Codes typically bundles your program guide and video-on-demand library directly into the login, no extra setup needed. With M3U, EPG data sometimes needs to be added as a separate XMLTV link depending on your provider and app, see our <a href="/blog/iptv-epg-not-working.html">EPG troubleshooting guide</a> if that's the format you're on and the guide isn't showing. Connection limits and device counts work identically under both formats, the delivery method doesn't change how many simultaneous streams your plan allows.</p>
+
       <h2>Which should you choose?</h2>
       <p>If your app or device only supports one format, that decides it for you. Otherwise, it's mostly preference. Xtream Codes tends to feel more like "logging in," while M3U feels more like "importing a list." Most established IPTV providers, including <a href="/">TruWave TV</a>, offer either option so you're not locked into one.</p>
 
@@ -127,6 +146,10 @@
       <p>Yes. The underlying subscription is the same. Your provider can usually give you either format, or both, on request.</p>
       <h3>Do I need technical skill to set these up?</h3>
       <p>No. You're pasting a URL or a set of login details into a player app's settings screen. Most providers' support teams will walk you through it the first time.</p>
+      <h3>How can I tell if I have an M3U playlist or Xtream Codes?</h3>
+      <p>A single link, especially one ending in ".m3u" or ".m3u8" or containing "get.php", is an M3U playlist. Three separate pieces, a server address, username, and password, is Xtream Codes.</p>
+      <h3>Is an M3U link less secure than Xtream Codes?</h3>
+      <p>Slightly, in one specific way: an M3U link has your credentials embedded in the URL itself, so anyone who gets that exact link can use it. Xtream Codes keeps username and password as separate fields. Neither is meaningfully insecure for normal personal use; just avoid sharing a full M3U URL publicly.</p>
 
       <div class="post-footer-cta">
         <h3>Get set up with either format</h3>
