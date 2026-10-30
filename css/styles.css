@@ -11,6 +11,7 @@
   --accent: #0c7d6e;
   --accent-dim: #095f54;
   --gold: #a8660f;
+  --gold-text: #975c0e;
   --danger: #b3261e;
   --radius: 16px;
   --radius-sm: 10px;
@@ -151,7 +152,7 @@ section{padding:64px 0;}
 .cat-card h3{font-size:1.05rem;margin-bottom:4px;}
 .cat-meta{
   display:block;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:8px;
+  color:var(--gold-text);margin-bottom:8px;
 }
 .cat-card p{font-size:.88rem;margin:0;}
 
@@ -379,6 +380,21 @@ footer.site-footer{border-top:1px solid var(--border);padding:50px 0 30px;}
 .article table th,.article table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);}
 .article table th{color:var(--text);font-weight:700;background:var(--bg-elev);}
 .article table td{color:var(--text-dim);}
+
+/* Comparison table card (e.g. /apps/ quick-comparison) */
+.price-table-wrap{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);margin:1.6em 0;
+}
+.article .price-table-wrap table{margin:0;}
+.article .price-table-wrap table th{
+  background:rgba(12,125,110,.08);color:var(--accent-dim);font-weight:800;
+  text-transform:uppercase;font-size:.74rem;letter-spacing:.03em;border-bottom:1px solid var(--border);
+}
+.article .price-table-wrap table td:first-child{color:var(--text);font-weight:700;}
+.price-table-wrap tbody tr{transition:background .15s;}
+.price-table-wrap tbody tr:hover{background:var(--bg-elev);}
+.price-table-wrap tbody tr:last-child td{border-bottom:none;}
 .article blockquote{
   border-left:3px solid var(--accent);margin:1.6em 0;padding:4px 20px;color:var(--text);
   font-style:italic;
