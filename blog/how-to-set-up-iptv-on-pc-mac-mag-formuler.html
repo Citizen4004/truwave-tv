@@ -41,7 +41,9 @@
       "mainEntity": [
         { "@type": "Question", "name": "Can I watch IPTV on a regular PC or Mac?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Using a player app like IPTV Smarters Pro (Windows/Mac) or VLC media player with your Xtream Codes login or M3U playlist URL. No special hardware is needed." } },
         { "@type": "Question", "name": "Does a MAG box use the same setup as Firestick or Android apps?", "acceptedAnswer": { "@type": "Answer", "text": "No. MAG boxes use their own built-in Portal interface rather than installable apps. You set the Portal Type to Xtream/M3U in the box's settings menu and enter your credentials there." } },
-        { "@type": "Question", "name": "Does Formuler work the same way as MAG?", "acceptedAnswer": { "@type": "Answer", "text": "Most Formuler models support the same Portal-based setup as MAG boxes. Newer Formuler models that run Android TV can alternatively install a standard app like TiviMate from their app store." } }
+        { "@type": "Question", "name": "Does Formuler work the same way as MAG?", "acceptedAnswer": { "@type": "Answer", "text": "Most Formuler models support the same Portal-based setup as MAG boxes. Newer Formuler models that run Android TV can alternatively install a standard app like TiviMate from their app store." } },
+        { "@type": "Question", "name": "Why does a MAG box need my hardware's MAC address?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional MAG/Stalker Portal setups authenticate by the box's hardware MAC address rather than a username and password, so your provider has to register that specific device. Switching to Xtream or M3U portal mode, where your firmware supports it, avoids this and lets you move your subscription between devices yourself." } },
+        { "@type": "Question", "name": "Why did my Formuler box stop showing channels after an update?", "acceptedAnswer": { "@type": "Answer", "text": "Formuler's automatic firmware updates occasionally reset Portal settings to default, separate from anything your IPTV provider controls. Re-check your Portal Type and credentials after any firmware update before assuming it's a subscription issue." } }
       ]
     }
   ]
@@ -72,7 +74,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / PC, Mac, MAG &amp; Formuler Setup</nav>
-      <span class="post-meta">Setup Guide · Updated October 2026 · 5 min read</span>
+      <span class="post-meta">Setup Guide · Updated October 2026 · 7 min read</span>
       <h1>How to Set Up IPTV on PC, Mac, MAG Box &amp; Formuler</h1>
       <p class="dek">These three device types don't use the typical app-store setup. Here's exactly what each one actually needs.</p>
 
@@ -97,6 +99,15 @@
       <p>Most Formuler boxes use the same Portal-based setup as MAG boxes above. The menu structure is very similar, typically under <strong>Settings → Playlist/Portal Settings</strong>. Set the Portal Type to Xtream or M3U and enter your credentials the same way.</p>
       <p>If you have a newer Formuler model running full Android TV, you have another option: install <a href="/blog/how-to-set-up-tivimate.html">TiviMate</a> directly from the Formuler app store and set it up exactly like an Android TV box.</p>
 
+      <h2>Getting smoother 4K playback in VLC</h2>
+      <p>If you're using VLC and 4K channels stutter or drop frames, check that hardware-accelerated decoding is actually turned on: <strong>Tools → Preferences → Input / Codecs → Hardware-accelerated decoding</strong>, and set it to "Automatic" rather than "Disable." VLC defaults to software decoding on some systems, which puts the full load on your CPU instead of your graphics hardware, noticeably worse for anything above Full HD.</p>
+
+      <h2>Why MAG boxes authenticate differently</h2>
+      <p>It's worth understanding why MAG setup looks so different from everything else. Traditional Stalker Portal authentication ties your subscription to the box's hardware MAC address rather than a username and password, your provider registers that specific MAC address on their end, and the box identifies itself automatically every time it connects. That's why switching to a new MAG box (not just a new credential) sometimes requires contacting your provider to register the new hardware, and why the Xtream/M3U portal mode covered above is worth using instead when your firmware supports it, it sidesteps MAC-based registration entirely in favor of standard login credentials you can move between devices yourself.</p>
+
+      <h2>Formuler firmware updates</h2>
+      <p>Formuler boxes receive periodic firmware updates from the manufacturer, separate from anything your IPTV provider controls, and a major firmware update can occasionally reset Portal settings back to default. If a Formuler box that was working suddenly shows no channels after an automatic update, re-check your Portal Type and credentials before assuming anything is wrong with your subscription itself.</p>
+
       <div class="callout">
         <p>Not sure which option applies to your exact model? Message TruWave TV on WhatsApp with your device model and we'll walk you through the right setup directly.</p>
       </div>
@@ -108,6 +119,10 @@
       <p>No. MAG boxes use their own built-in Portal interface rather than installable apps. You set the Portal Type to Xtream/M3U in the box's settings menu and enter your credentials there.</p>
       <h3>Does Formuler work the same way as MAG?</h3>
       <p>Most Formuler models support the same Portal-based setup as MAG boxes. Newer Formuler models that run Android TV can alternatively install a standard app like TiviMate from their app store.</p>
+      <h3>Why does a MAG box need my hardware's MAC address?</h3>
+      <p>Traditional MAG/Stalker Portal setups authenticate by the box's hardware MAC address rather than a username and password, so your provider has to register that specific device. Switching to Xtream or M3U portal mode, where your firmware supports it, avoids this and lets you move your subscription between devices yourself.</p>
+      <h3>Why did my Formuler box stop showing channels after an update?</h3>
+      <p>Formuler's automatic firmware updates occasionally reset Portal settings to default, separate from anything your IPTV provider controls. Re-check your Portal Type and credentials after any firmware update before assuming it's a subscription issue.</p>
 
       <div class="post-footer-cta">
         <h3>Ready to get set up?</h3>

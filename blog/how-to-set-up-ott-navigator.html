@@ -43,7 +43,9 @@
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Is OTT Navigator available on iOS?", "acceptedAnswer": { "@type": "Answer", "text": "No, OTT Navigator is Android-only, though it can run on a PC through an Android emulator such as BlueStacks." } },
-        { "@type": "Question", "name": "Why is OTT Navigator setup more involved than other apps?", "acceptedAnswer": { "@type": "Answer", "text": "OTT Navigator exposes many more configuration options (EPG sources, catch-up settings, stream format) which gives advanced users more control but adds a few extra steps for first-time setup." } }
+        { "@type": "Question", "name": "Why is OTT Navigator setup more involved than other apps?", "acceptedAnswer": { "@type": "Answer", "text": "OTT Navigator exposes many more configuration options (EPG sources, catch-up settings, stream format) which gives advanced users more control but adds a few extra steps for first-time setup." } },
+        { "@type": "Question", "name": "Can I reorder or hide channels in OTT Navigator?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, long-press a channel and choose Edit channels to drag channels into a custom order, create your own groups, or hide ones you don't watch without removing them from the source playlist." } },
+        { "@type": "Question", "name": "Can I transfer my OTT Navigator setup to a new device?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, use Settings, Backup and restore, Export settings to save your playlists, EPG sources, and channel organization to a file, then import it on the new device." } }
       ]
     }
   ]
@@ -74,7 +76,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Set Up IPTV on OTT Navigator</nav>
-      <span class="post-meta">Setup Guide · Updated October 2026 · 4 min read</span>
+      <span class="post-meta">Setup Guide · Updated October 2026 · 7 min read</span>
       <h1>How to Set Up IPTV on OTT Navigator (Step-by-Step)</h1>
       <p class="dek">OTT Navigator gives advanced users deep control over their IPTV setup. Detailed EPG, catch-up, and playlist management. It takes a little more configuration than simpler apps, but the core steps are straightforward.</p>
 
@@ -86,6 +88,15 @@
         <li><strong>Enter your details and save.</strong> Paste your playlist URL or Xtream Codes credentials, then save.</li>
         <li><strong>Load the guide.</strong> Return to the home screen. Your channels and EPG build automatically.</li>
       </ol>
+
+      <h2>Organizing your channel list</h2>
+      <p>This is where OTT Navigator genuinely pulls ahead of simpler apps: a full channel editor for sorting, grouping, renaming, and hiding channels you don't watch. From the channel list, long-press a channel and choose "Edit channels" to drag channels into a custom order, create your own groups separate from the provider's default categories, or hide ones you never use without deleting them from the source playlist. It's worth spending five minutes here if you have a large channel list, since the default order is whatever your provider's feed happens to use.</p>
+
+      <h2>Fixing stutter with the parser and buffer settings</h2>
+      <p>If playback stutters even though your connection tests fine, check <strong>Settings → General → Playback → Parser</strong>. OTT Navigator defaults to its own internal parser, but switching to "ExoPlayer" sometimes performs better on certain Android TV hardware, it's worth trying both since the better option genuinely varies by device. In the same playback settings, increasing the buffer size slightly (a few seconds higher than default) can also smooth out a connection that's fine on average but has brief dips.</p>
+
+      <h2>Backing up your configuration</h2>
+      <p>Since OTT Navigator has so many configurable settings, channel groups, and playlists, it includes a genuinely useful export feature so you don't have to redo all of it if you switch devices. Go to <strong>Settings → Backup and restore → Export settings</strong> to save everything to a file, then import it on a new device the same way. This covers your playlists, EPG sources, and any custom channel organization you've set up, not just the basic login.</p>
 
       <h2>Common issues</h2>
       <table>
@@ -106,6 +117,10 @@
       <p>No, OTT Navigator is Android-only, though it can run on a PC through an Android emulator such as BlueStacks.</p>
       <h3>Why is OTT Navigator setup more involved than other apps?</h3>
       <p>OTT Navigator exposes many more configuration options (EPG sources, catch-up settings, stream format) which gives advanced users more control but adds a few extra steps for first-time setup.</p>
+      <h3>Can I reorder or hide channels in OTT Navigator?</h3>
+      <p>Yes, long-press a channel and choose "Edit channels" to drag channels into a custom order, create your own groups, or hide ones you don't watch without removing them from the source playlist.</p>
+      <h3>Can I transfer my OTT Navigator setup to a new device?</h3>
+      <p>Yes, use Settings → Backup and restore → Export settings to save your playlists, EPG sources, and channel organization to a file, then import it on the new device.</p>
 
       <div class="post-footer-cta">
         <h3>Need help setting up OTT Navigator?</h3>

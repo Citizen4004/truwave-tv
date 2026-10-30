@@ -43,7 +43,9 @@
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Is GSE Smart IPTV good for Apple TV?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, GSE Smart IPTV is one of the more established IPTV player apps available on Apple TV, alongside iPhone and iPad." } },
-        { "@type": "Question", "name": "Does GSE Smart IPTV support Xtream Codes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, GSE Smart IPTV supports both Xtream-Codes API logins and standard M3U playlist URLs." } }
+        { "@type": "Question", "name": "Does GSE Smart IPTV support Xtream Codes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, GSE Smart IPTV supports both Xtream-Codes API logins and standard M3U playlist URLs." } },
+        { "@type": "Question", "name": "Why does GSE show channels but no program guide?", "acceptedAnswer": { "@type": "Answer", "text": "The EPG source in GSE is set separately from the playlist itself. Open your saved playlist's settings and check the EPG field, if it's empty and your provider doesn't auto-include guide data, you'll need to add the EPG URL there manually." } },
+        { "@type": "Question", "name": "Can I watch two channels at once in GSE Smart IPTV?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, GSE includes a multi-screen, picture-in-picture style view for watching more than one channel simultaneously on supported devices. It uses more bandwidth and processing power, so it works best on a stronger device and connection." } }
       ]
     }
   ]
@@ -74,7 +76,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Set Up IPTV on GSE Smart IPTV</nav>
-      <span class="post-meta">Setup Guide · Updated October 2026 · 3 min read</span>
+      <span class="post-meta">Setup Guide · Updated October 2026 · 5 min read</span>
       <h1>How to Set Up IPTV on GSE Smart IPTV (Step-by-Step)</h1>
       <p class="dek">GSE Smart IPTV is a go-to choice for iPhone, iPad, and Apple TV owners. Here's how to connect your subscription in a few steps.</p>
 
@@ -86,6 +88,15 @@
         <li><strong>Enter your details.</strong> Add your server/username/password or your M3U link, then save.</li>
         <li><strong>Watch.</strong> Select the saved playlist from Remote Playlists to load your channels.</li>
       </ol>
+
+      <h2>Adding your program guide (EPG) separately</h2>
+      <p>In GSE, the EPG source is its own setting, not something that loads automatically with your playlist. After saving your remote playlist, go back into it, open the settings (the gear icon next to the playlist name), and look for the "EPG" field. If your provider gave you a separate EPG URL, paste it here, otherwise GSE will pull guide data from your Xtream Codes login automatically if your provider includes it. Skipping this step is the most common reason people get channels but no program schedule in GSE specifically.</p>
+
+      <h2>Managing more than one saved playlist</h2>
+      <p>GSE lets you save multiple remote playlists at once, which is genuinely useful if you're testing a trial alongside an existing subscription, or comparing a backup playlist. Switch between them from the main Remote Playlists screen rather than deleting and re-adding each time, each one keeps its own channel list and EPG settings independently.</p>
+
+      <h2>GSE's multi-screen feature</h2>
+      <p>One thing that sets GSE apart from most other player apps: it supports a multi-screen, picture-in-picture style view where you can watch more than one channel at the same time on supported devices. It's a nice-to-have for things like keeping an eye on a second game, though it does use more processing power and bandwidth, so expect it to work best on a stronger device and connection rather than an older phone over weak Wi-Fi.</p>
 
       <h2>Common issues</h2>
       <table>
@@ -106,6 +117,10 @@
       <p>Yes, GSE Smart IPTV is one of the more established IPTV player apps available on Apple TV, alongside iPhone and iPad.</p>
       <h3>Does GSE Smart IPTV support Xtream Codes?</h3>
       <p>Yes, GSE Smart IPTV supports both Xtream-Codes API logins and standard M3U playlist URLs.</p>
+      <h3>Why does GSE show channels but no program guide?</h3>
+      <p>The EPG source in GSE is set separately from the playlist itself. Open your saved playlist's settings and check the EPG field, if it's empty and your provider doesn't auto-include guide data, you'll need to add the EPG URL there manually.</p>
+      <h3>Can I watch two channels at once in GSE Smart IPTV?</h3>
+      <p>Yes, GSE includes a multi-screen, picture-in-picture style view for watching more than one channel simultaneously on supported devices. It uses more bandwidth and processing power, so it works best on a stronger device and connection.</p>
 
       <div class="post-footer-cta">
         <h3>Need help setting up GSE Smart IPTV?</h3>
