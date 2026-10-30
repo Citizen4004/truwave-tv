@@ -204,6 +204,27 @@ section{padding:64px 0;}
 
 .pricing-note{text-align:center;color:var(--text-faint);font-size:.95rem;margin-top:26px;}
 
+/* Plan comparison cards (used on /plans/) */
+.plan-compare-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0;}
+@media (max-width:760px){.plan-compare-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:420px){.plan-compare-grid{grid-template-columns:1fr;}}
+.plan-compare-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:20px 14px;text-align:center;position:relative;
+  transition:border-color .15s, transform .15s, box-shadow .15s;
+}
+.plan-compare-card:hover{border-color:var(--accent-dim);transform:translateY(-2px);box-shadow:var(--shadow);}
+.plan-compare-card.featured{border-color:var(--accent);background:rgba(12,125,110,.06);box-shadow:0 0 0 1px var(--accent);}
+.plan-compare-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#ffffff;
+  font-size:.7rem;font-weight:800;padding:4px 12px;border-radius:99px;letter-spacing:.03em;white-space:nowrap;
+}
+.plan-compare-term{display:block;font-size:.78rem;color:var(--text-faint);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+.plan-compare-price{display:block;font-size:.85rem;color:var(--text-faint);margin-bottom:10px;}
+.plan-compare-rate{display:block;font-size:1.6rem;font-weight:800;color:var(--accent);line-height:1.1;}
+.plan-compare-rate small{font-size:.85rem;font-weight:600;color:var(--text-faint);}
+.plan-compare-save{display:block;font-size:.8rem;color:var(--text-dim);font-weight:600;margin-top:8px;}
+
 /* How it works */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
 @media (max-width:900px){.steps{grid-template-columns:1fr 1fr;}}
