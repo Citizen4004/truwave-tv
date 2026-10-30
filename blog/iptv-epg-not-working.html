@@ -25,7 +25,7 @@
       "description": "When your IPTV channel guide is empty, outdated, or missing, here's how to diagnose and fix EPG issues on any player app or device.",
       "url": "https://truwavetv.com/blog/iptv-epg-not-working.html",
       "datePublished": "2026-10-28",
-      "dateModified": "2026-10-29",
+      "dateModified": "2026-10-30",
       "author": { "@type": "Organization", "name": "TruWave TV", "url": "https://truwavetv.com/" },
       "publisher": { "@type": "Organization", "name": "TruWave TV", "logo": { "@type": "ImageObject", "url": "https://truwavetv.com/images/icons/favicon.svg" } }
     },
@@ -43,7 +43,9 @@
         { "@type": "Question", "name": "What is an EPG in IPTV?", "acceptedAnswer": { "@type": "Answer", "text": "EPG stands for Electronic Program Guide. It's the schedule data that shows what's currently playing and what's coming up next on each channel." } },
         { "@type": "Question", "name": "Why is my channel guide empty?", "acceptedAnswer": { "@type": "Answer", "text": "Usually a cache issue, an unsynced EPG source, or a channel that simply doesn't have guide data attached to it. Refreshing the playlist and EPG in your app's settings fixes most cases." } },
         { "@type": "Question", "name": "Does an empty guide mean my channels won't play?", "acceptedAnswer": { "@type": "Answer", "text": "No. The guide is just schedule information. Channels can stream fine even if the program guide data is temporarily missing or outdated." } },
-        { "@type": "Question", "name": "Is TiviMate EPG not working TiviMate's fault or the provider's?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always the provider or EPG source, not TiviMate itself. TiviMate is just the player displaying guide data it's given. If that data isn't being sent correctly, the app has nothing to show, regardless of how it's configured." } }
+        { "@type": "Question", "name": "Is TiviMate EPG not working TiviMate's fault or the provider's?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always the provider or EPG source, not TiviMate itself. TiviMate is just the player displaying guide data it's given. If that data isn't being sent correctly, the app has nothing to show, regardless of how it's configured." } },
+        { "@type": "Question", "name": "Why does my guide show the wrong times instead of being empty?", "acceptedAnswer": { "@type": "Answer", "text": "This is usually a timezone mismatch, not missing data. Check your device's timezone setting against your actual location rather than assuming automatic has it right." } },
+        { "@type": "Question", "name": "Should I add a separate XMLTV URL if my provider already includes EPG data?", "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Adding a third-party XMLTV link on top of a provider's built-in guide data can cause conflicts or stale listings. If your guide worked before you added one, removing it usually fixes the issue." } }
       ]
     }
   ]
@@ -74,7 +76,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / IPTV EPG Not Working</nav>
-      <span class="post-meta">Troubleshooting · Updated October 2026 · 4 min read</span>
+      <span class="post-meta">Troubleshooting · Updated October 2026 · 7 min read</span>
       <h1>IPTV Program Guide (EPG) Not Showing? How to Fix It</h1>
       <p class="dek">An empty or outdated program guide doesn't mean your channels are broken. It's almost always a sync or cache issue, and it's quick to fix.</p>
 
@@ -100,6 +102,20 @@
         <li><strong>Confirm the EPG URL matches what your provider gave you exactly</strong>. A typo or outdated link is one of the most common causes of a guide that loads the channel list fine but shows nothing for the schedule.</li>
       </ul>
 
+      <h2>If you're using IPTV Smarters Pro specifically</h2>
+      <p>Smarters Pro handles EPG a bit differently from TiviMate, and the fix lives in a different menu, so it's worth covering separately rather than assuming the same steps apply.</p>
+      <ul>
+        <li><strong>Settings → Playlist Settings → EPG.</strong> Confirm the EPG is actually enabled for your playlist, it's a toggle that can get switched off during setup without you noticing.</li>
+        <li><strong>Pull down to refresh on the guide screen itself.</strong> Unlike TiviMate's separate refresh action, Smarters Pro often needs a manual pull-to-refresh gesture directly on the EPG tab to force a re-fetch.</li>
+        <li><strong>Delete and re-add the playlist as a last resort.</strong> If the EPG still won't populate, removing the playlist entirely and re-adding it with the same credentials forces a completely fresh sync, more reliable than refreshing an already-broken cache.</li>
+      </ul>
+
+      <h2>Built-in EPG vs a separate XMLTV URL</h2>
+      <p>Guide data can come from one of two places, and mixing them up is a common source of confusion. Most providers, including TruWave TV, deliver EPG data built directly into the Xtream Codes login, no extra URL needed. Some setups instead rely on a separate XMLTV link you add manually in your app's settings. If you've added a third-party XMLTV URL on top of a provider that already includes its own guide data, the two can conflict or overwrite each other, sometimes showing stale or duplicate listings. If your guide looked fine and then broke after adding an EPG URL you found online, removing that manual entry and relying on the provider's built-in data is usually the fix.</p>
+
+      <h2>Guide shows data, but the times are wrong</h2>
+      <p>This is a different symptom from a totally empty guide, and it's almost always a timezone mismatch rather than missing data. If your device's timezone is set incorrectly, or set to automatic in a region with unreliable timezone detection, the guide can display what looks like a full schedule that's simply shifted by a few hours. Double-check your device's timezone setting against your actual location rather than assuming it's correct just because it's on "automatic."</p>
+
       <div class="callout">
         <p>Still showing a blank guide after these steps? Message TruWave TV on WhatsApp with your app name and device, and we'll check it with you directly.</p>
       </div>
@@ -113,6 +129,10 @@
       <p>No. The guide is just schedule information. Channels can stream fine even if the program guide data is temporarily missing or outdated.</p>
       <h3>Is TiviMate EPG not working TiviMate's fault or the provider's?</h3>
       <p>Almost always the provider or EPG source, not TiviMate itself. TiviMate is just the player displaying guide data it's given. If that data isn't being sent correctly, the app has nothing to show, regardless of how it's configured.</p>
+      <h3>Why does my guide show the wrong times instead of being empty?</h3>
+      <p>This is usually a timezone mismatch, not missing data. Check your device's timezone setting against your actual location rather than assuming "automatic" has it right.</p>
+      <h3>Should I add a separate XMLTV URL if my provider already includes EPG data?</h3>
+      <p>Generally no. Adding a third-party XMLTV link on top of a provider's built-in guide data can cause conflicts or stale listings. If your guide worked before you added one, removing it usually fixes the issue.</p>
 
       <div class="post-footer-cta">
         <h3>Need help with your program guide?</h3>
