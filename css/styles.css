@@ -35,7 +35,7 @@ ul{padding:0;margin:0;list-style:none;}
 h1,h2,h3,h4{line-height:1.2;margin:0 0 .5em;}
 p{margin:0 0 1em;color:var(--text-dim);}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
-section{padding:88px 0;}
+section{padding:64px 0;}
 @media (max-width:720px){section{padding:56px 0;}}
 
 .eyebrow{
@@ -184,8 +184,9 @@ section{padding:88px 0;}
 }
 .price-card.featured{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent), var(--shadow);}
 .plan-badge{
-  position:absolute;top:-14px;left:24px;background:var(--accent);color:#ffffff;
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#ffffff;
   font-size:.78rem;font-weight:800;padding:5px 14px;border-radius:99px;letter-spacing:.03em;
+  white-space:nowrap;
 }
 .plan-name{font-size:.95rem;color:var(--text-faint);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;display:block;}
 .plan-price{font-size:2.3rem;font-weight:800;color:var(--text);}
