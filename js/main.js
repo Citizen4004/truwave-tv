@@ -64,6 +64,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // GA4 conversion-intent click tracking: trial vs. plans CTAs, since
+  // actual conversions happen on WhatsApp and can't be measured directly.
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+    var text = (link.textContent || '').trim();
+    var lower = text.toLowerCase();
+    var eventName = null;
+
+    if (lower.indexOf('trial') !== -1) {
+      eventName = 'trial_button_click';
+    } else if (lower.indexOf('plan') !== -1) {
+      eventName = 'plans_button_click';
+    }
+
+    if (eventName && typeof gtag === 'function') {
+      gtag('event', eventName, { link_text: text.slice(0, 100) });
+    }
+  });
+
   // Testimonials slider
   var track = document.getElementById('testi-track');
   if (track) {
