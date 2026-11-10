@@ -83,7 +83,7 @@
   <section style="padding-top:56px;">
     <div class="container article">
       <h1>How to Set Up IPTV on PC, Mac, MAG Box &amp; Formuler</h1>
-      <p class="dek">These three device types don't use the typical app-store setup. Here's exactly what each one actually needs.</p>
+      <p class="dek">These three device types don't use the typical app-store setup. Each one needs a different approach, detailed below.</p>
 
       <h2>PC and Mac</h2>
       <p>No special hardware required, either of these works:</p>
@@ -110,7 +110,7 @@
       <p>If you're using VLC and 4K channels stutter or drop frames, check that hardware-accelerated decoding is actually turned on: <strong>Tools → Preferences → Input / Codecs → Hardware-accelerated decoding</strong>, and set it to "Automatic" rather than "Disable." VLC defaults to software decoding on some systems, which puts the full load on your CPU instead of your graphics hardware, noticeably worse for anything above Full HD.</p>
 
       <h2>Why MAG boxes authenticate differently</h2>
-      <p>It's worth understanding why MAG setup looks so different from everything else. Traditional Stalker Portal authentication ties your subscription to the box's hardware MAC address rather than a username and password, your provider registers that specific MAC address on their end, and the box identifies itself automatically every time it connects. That's why switching to a new MAG box (not just a new credential) sometimes requires contacting your provider to register the new hardware, and why the Xtream/M3U portal mode covered above is worth using instead when your firmware supports it, it sidesteps MAC-based registration entirely in favor of standard login credentials you can move between devices yourself.</p>
+      <p>MAG setup looks different from everything else because traditional Stalker Portal authentication ties your subscription to the box's hardware MAC address rather than a username and password: your provider registers that specific MAC address on their end, and the box identifies itself automatically every time it connects. That's why switching to a new MAG box (not just a new credential) sometimes requires contacting your provider to register the new hardware, and why the Xtream/M3U portal mode covered above is worth using instead when your firmware supports it: it sidesteps MAC-based registration entirely in favor of standard login credentials you can move between devices yourself.</p>
 
       <h2>Formuler firmware updates</h2>
       <p>Formuler boxes receive periodic firmware updates from the manufacturer, separate from anything your IPTV provider controls, and a major firmware update can occasionally reset Portal settings back to default. If a Formuler box that was working suddenly shows no channels after an automatic update, re-check your Portal Type and credentials before assuming anything is wrong with your subscription itself.</p>
