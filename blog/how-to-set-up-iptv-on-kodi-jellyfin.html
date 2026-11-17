@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CEJZK7XZ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3CEJZK7XZ6');
+</script>
+<title>How to Set Up IPTV on Kodi &amp; Jellyfin (and Why Plex Is Different)</title>
+<meta name="description" content="Step-by-step IPTV setup for Kodi's PVR IPTV Simple Client and Jellyfin's Live TV, plus why Plex doesn't support M3U or Xtream Codes playlists the same way.">
+<link rel="canonical" href="https://truwavetv.com/blog/how-to-set-up-iptv-on-kodi-jellyfin.html">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/styles.css?v=11">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TruWave TV">
+<meta property="og:title" content="How to Set Up IPTV on Kodi &amp; Jellyfin (and Why Plex Is Different)">
+<meta property="og:description" content="Step-by-step IPTV setup for Kodi and Jellyfin, plus why Plex doesn't support M3U or Xtream Codes playlists the same way.">
+<meta property="og:url" content="https://truwavetv.com/blog/how-to-set-up-iptv-on-kodi-jellyfin.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "name": "How to Set Up IPTV on Kodi & Jellyfin",
+      "step": [
+        { "@type": "HowToStep", "name": "Kodi", "text": "Install the PVR IPTV Simple Client addon, then enter your M3U playlist URL and, optionally, your XMLTV EPG URL in its settings." },
+        { "@type": "HowToStep", "name": "Jellyfin", "text": "In Jellyfin's dashboard, add a Live TV tuner source using your M3U playlist URL, then add your XMLTV guide URL separately for program data." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://truwavetv.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://truwavetv.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Kodi & Jellyfin Setup", "item": "https://truwavetv.com/blog/how-to-set-up-iptv-on-kodi-jellyfin.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I use IPTV on Plex the same way as Kodi or Jellyfin?", "acceptedAnswer": { "@type": "Answer", "text": "Not directly. Plex's Live TV & DVR feature is built around physical HDHomeRun tuners, not internet M3U or Xtream Codes playlists. Unofficial third-party bridge tools exist that convert a playlist into something Plex can read, but they're an extra layer of setup and maintenance on top of your subscription, not something we can support directly. If Plex is your main media app, Jellyfin's Live TV works the same way Plex's library does and accepts IPTV playlists natively." } },
+        { "@type": "Question", "name": "Do I need the EPG URL, or just the channel playlist?", "acceptedAnswer": { "@type": "Answer", "text": "The playlist alone gets your channels playing. The EPG (XMLTV) URL is what fills in the program guide with show names and times. Both Kodi and Jellyfin work without it, you'll just see channels with no schedule information." } },
+        { "@type": "Question", "name": "Why would I use Kodi or Jellyfin instead of a dedicated IPTV app like TiviMate?", "acceptedAnswer": { "@type": "Answer", "text": "Mainly if you're already using Kodi or Jellyfin as your main media center for movies and shows, and want live TV folded into the same interface instead of switching apps. A dedicated app like TiviMate or IPTV Smarters Pro is usually a smoother experience if live TV is your main use case." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="glow-bg" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand"><span class="brand-mark"><svg viewBox="0 0 64 64" width="20" height="20" aria-hidden="true"><path d="M 24.9 20.6 C 24.4 20.1 23.5 20.4 23.5 21.1 L 23.5 33.8 C 23.5 34.5 24.4 34.9 24.9 34.4 L 35 28 C 35.5 27.6 35.5 26.6 35 26.3 Z" fill="#fff"/><path d="M 16 41.3 C 19.4 37.1 25 37.1 28.1 41.3 C 31.3 45.6 36.9 45.6 40.9 41.3 C 43.1 39.1 45 38.2 48 38.2" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg></span>TruWave TV</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="/">Home</a>
+      <a href="/plans/">Plans</a>
+      <a href="/devices/">Devices</a>
+      <a href="/apps/">Apps</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="btn btn-primary btn-sm" href="https://wa.me/12097559199?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20TruWave%20TV%20IPTV." rel="noopener" target="_blank">Chat on WhatsApp</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section style="padding-top:56px;">
+    <div class="container article">
+      <h1>How to Set Up IPTV on Kodi &amp; Jellyfin (and Why Plex Is Different)</h1>
+      <p class="dek">Kodi and Jellyfin both accept an IPTV M3U playlist directly, built in, no extra bridge software needed. Plex doesn't work the same way, and it's worth knowing why before you spend time trying to force it.</p>
+
+      <h2>Kodi</h2>
+      <p>Kodi handles live TV through an addon called PVR IPTV Simple Client, which comes bundled with Kodi but isn't enabled by default.</p>
+      <ol>
+        <li>Go to <strong>Settings → Add-ons → My add-ons → PVR clients</strong> and open <strong>PVR IPTV Simple Client</strong>.</li>
+        <li>Enable it, then open its configuration.</li>
+        <li>Under the <strong>General</strong> tab, set the M3U Play List URL to your TruWave TV playlist link.</li>
+        <li>Under the <strong>EPG Settings</strong> tab, set the XMLTV URL if you have one, this fills in the program guide.</li>
+        <li>Save, then restart Kodi. Go to the <strong>TV</strong> section and your channels should populate within a minute.</li>
+      </ol>
+      <p>If channels don't appear after restarting, double-check the playlist URL was pasted in full with nothing cut off, that's the most common cause.</p>
+
+      <h2>Jellyfin</h2>
+      <p>Jellyfin has native Live TV support built into its dashboard, no addon needed.</p>
+      <ol>
+        <li>In Jellyfin's web dashboard, go to <strong>Live TV</strong> in the left menu.</li>
+        <li>Under <strong>Tuner Devices</strong>, click to add a new one and choose <strong>M3U Tuner</strong> as the type.</li>
+        <li>Paste your playlist URL and save.</li>
+        <li>Under <strong>TV Guide Data Providers</strong>, add your XMLTV URL the same way for program guide data.</li>
+        <li>Jellyfin will scan and import your channels, this can take a minute or two the first time depending on channel count.</li>
+      </ol>
+      <p>Once set up, Live TV appears as its own section alongside your movies and shows, in the same interface.</p>
+
+      <h2>Why Plex is a different situation</h2>
+      <p>Plex's Live TV &amp; DVR feature was built around physical over-the-air tuners (HDHomeRun devices specifically), not internet IPTV playlists. There's no official setting where you paste an M3U URL or Xtream Codes login into Plex the way you can with Kodi or Jellyfin. Some third-party tools exist that create a virtual tuner Plex can see and feed it your IPTV playlist, but that's an extra piece of software to install, configure, and keep running, on top of your subscription, and it's not something we can troubleshoot or support directly. If Plex is specifically where you want live TV, Jellyfin is the closest equivalent: same kind of unified media library feel, with IPTV support actually built in rather than bolted on.</p>
+
+      <div class="callout">
+        <p>Need your exact playlist and EPG URL for either setup? Message us on WhatsApp and we'll send them over along with any app-specific tips for your version.</p>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Can I use IPTV on Plex the same way as Kodi or Jellyfin?</h3>
+      <p>Not directly. Plex's Live TV &amp; DVR feature is built around physical HDHomeRun tuners, not internet M3U or Xtream Codes playlists. Unofficial third-party bridge tools exist that convert a playlist into something Plex can read, but they're an extra layer of setup and maintenance on top of your subscription, not something we can support directly. If Plex is your main media app, Jellyfin's Live TV works the same way Plex's library does and accepts IPTV playlists natively.</p>
+      <h3>Do I need the EPG URL, or just the channel playlist?</h3>
+      <p>The playlist alone gets your channels playing. The EPG (XMLTV) URL is what fills in the program guide with show names and times. Both Kodi and Jellyfin work without it, you'll just see channels with no schedule information.</p>
+      <h3>Why would I use Kodi or Jellyfin instead of a dedicated IPTV app like TiviMate?</h3>
+      <p>Mainly if you're already using Kodi or Jellyfin as your main media center for movies and shows, and want live TV folded into the same interface instead of switching apps. A dedicated app like TiviMate or IPTV Smarters Pro is usually a smoother experience if live TV is your main use case.</p>
+
+      <div class="post-footer-cta">
+        <h3>Ready to get set up?</h3>
+        <p>Start your free 24-hour trial and we'll send your playlist and EPG links for Kodi, Jellyfin, or any other app.</p>
+        <a class="btn btn-primary" href="https://wa.me/12097559199?text=Hi%21%20I%27d%20like%20help%20setting%20up%20IPTV%20on%20Kodi%20or%20Jellyfin." rel="noopener" target="_blank">Chat on WhatsApp</a>
+      </div>
+
+      <div class="related-posts">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/xtream-codes-vs-m3u-playlist.html">Xtream Codes vs M3U Playlist: What's the Difference?</a></li>
+          <li><a href="/blog/how-to-set-up-iptv-on-pc-mac-mag-formuler.html">How to Set Up IPTV on PC, Mac, MAG Box &amp; Formuler</a></li>
+          <li><a href="/apps/">Compare IPTV Player Apps</a></li>
+          <li><a href="/blog/iptv-epg-not-working.html">IPTV Program Guide (EPG) Not Showing</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclosure">TruWave TV is an IPTV provider offering live channels plus Movies & TV Shows.</p>
+    <div class="footer-grid">
+      <a href="/" class="brand"><span class="brand-mark"><svg viewBox="0 0 64 64" width="20" height="20" aria-hidden="true"><path d="M 24.9 20.6 C 24.4 20.1 23.5 20.4 23.5 21.1 L 23.5 33.8 C 23.5 34.5 24.4 34.9 24.9 34.4 L 35 28 C 35.5 27.6 35.5 26.6 35 26.3 Z" fill="#fff"/><path d="M 16 41.3 C 19.4 37.1 25 37.1 28.1 41.3 C 31.3 45.6 36.9 45.6 40.9 41.3 C 43.1 39.1 45 38.2 48 38.2" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg></span>TruWave TV</a>
+      <nav class="footer-links">
+        <a href="/">Home</a>
+        <a href="/plans/">Plans</a>
+        <a href="/devices/">Devices</a>
+        <a href="/apps/">Apps</a>
+        <a href="/blog/">Blog</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+      </nav>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> TruWave TV. All rights reserved.</span></div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/12097559199?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20TruWave%20TV%20IPTV." rel="noopener" target="_blank" aria-label="Chat with TruWave TV on WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/main.js?v=7"></script>
+</body>
+</html>
