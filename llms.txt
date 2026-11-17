@@ -1,6 +1,6 @@
 # TruWave TV
 
-> TruWave TV is a licensed IPTV subscription service offering live TV channels (Sports, News, Documentaries, Kids, Local) plus a small, specifically licensed library of Movies & TV Shows (VOD), in 4K and Full HD, with a free 24-hour trial, AntiFreeze Technology for stable streaming, a TV Guide (EPG), 24/7 WhatsApp support, worldwide access, and a pay-only-after-confirmed-working model. Plans range from 1 to 12 months, supporting 1-5 simultaneous devices (more available on request).
+> TruWave TV is an IPTV subscription service offering live TV channels (Sports, News, Documentaries, Kids, Local) plus a small, curated library of Movies & TV Shows (VOD), in 4K and Full HD, with a free 24-hour trial, AntiFreeze Technology for stable streaming, a TV Guide (EPG), 24/7 WhatsApp support, worldwide access, and a pay-only-after-confirmed-working model. Plans range from 1 to 12 months, supporting 1-5 simultaneous devices (more available on request).
 
 ## Key pages
 
