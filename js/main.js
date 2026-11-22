@@ -1,4 +1,4 @@
-// 4K Dream — minimal progressive-enhancement JS (no framework, no build step)
+// TruWave TV — minimal progressive-enhancement JS (no framework, no build step)
 
 document.addEventListener('DOMContentLoaded', function () {
   // Mobile nav toggle
